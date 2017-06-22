@@ -19,4 +19,10 @@
       <context-root>x21aAppWar</context-root>
     </web>
   </module>
+  <module>
+    <web>
+      <web-uri>x21aModulesWar.war</web-uri>
+      <context-root>x21aModulesWar</context-root>
+    </web>
+  </module>
 </application>

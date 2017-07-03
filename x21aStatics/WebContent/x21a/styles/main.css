@@ -526,3 +526,8 @@ section > h1, section > h2, section > h3, section > h4, section > h5, section > 
 
 .celdaEspacio {
   width: 5em; }
+  
+  
+ .task-done span.custom-control-description{
+ 	text-decoration: line-through;
+ }

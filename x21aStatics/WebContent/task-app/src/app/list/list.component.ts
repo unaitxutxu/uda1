@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
 
 import { List } from "./list";
 
@@ -13,9 +13,25 @@ export class ListComponent implements OnInit {
 
   @Input() value: string;
 
+  @Output() modifyListEvent: EventEmitter<List> = new EventEmitter(true);
+  @Output() deleteListEvent: EventEmitter<List> = new EventEmitter(true);
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  modifyList(){
+    console.log("modifyList");
+    this.modifyListEvent.emit(this.list);
+
+  }
+
+  deleteList(){
+    console.log("modifyList");
+    this.deleteListEvent.emit(this.list);
+
   }
 
 }

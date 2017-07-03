@@ -17,6 +17,10 @@
 		<put-attribute name="includes" value="" />
 	</definition>
 	
+	<definition name="templateFrontend" template="/WEB-INF/layouts/template-frontend.jsp">
+		<put-attribute name="includes" value="" />
+	</definition>
+	
 	<!-- Plantilla de la pagina de login del Mock -->
 	<definition name="templateLogin" template="/WEB-INF/layouts/templateLogin.jsp">
 		<put-attribute name="header" value="/WEB-INF/layouts/header.jsp" />
@@ -62,5 +66,12 @@
 		<put-attribute name="content" value="/WEB-INF/views/todoList/task.jsp" />
 		<put-attribute name="includes" value="/WEB-INF/views/todoList/task-includes.jsp" />
 	</definition>
+
+	<definition name="board" extends="templateFrontend">
+<!-- 		<put-attribute name="content" value="/WEB-INF/views/todoList/task.jsp" /> -->
+		<put-attribute name="includes" value="/WEB-INF/views/angular-app/board-includes.jsp" />
+	</definition>
+
+	
 
 </tiles-definitions>

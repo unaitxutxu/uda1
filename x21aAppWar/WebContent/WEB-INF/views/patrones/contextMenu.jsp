@@ -16,7 +16,11 @@
 
 <%@page pageEncoding="UTF-8" contentType="text/html; charset=UTF-8"%>
 <%@include file="/WEB-INF/includeTemplate.inc"%>
-
+<style>
+  #context-menu-layer-ul-contextMenu-other-red > .context-menu-visible, #contextMenu1 > .context-menu-visible{
+  background-color:red !important;
+}
+</style>
 <section class="row">
 	<div class="col-xs-12">
 		<h2>Context Menu</h2>
@@ -57,6 +61,19 @@
 					<center>
 						Abrir desde otro elemento + bajo demanda
 						<button type="button" id="activate-menu">click me</button>
+					</center>
+				</h2>
+			</div>
+		</div>
+		
+		<div id="contextMenu-other-red"
+			class="card card-inverse contextMenu-other-red"
+			style="background-color: #333; border-color: #333;">
+			<div class="card-block">
+				<h2 class="card-blockquote">
+					<center>
+						Abrir desde otro elemento + bajo demanda : Red Color
+						<button type="button" id="activate-menu-red">click me</button>
 					</center>
 				</h2>
 			</div>

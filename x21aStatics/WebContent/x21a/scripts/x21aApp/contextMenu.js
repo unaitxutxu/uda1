@@ -57,7 +57,7 @@ jQuery(document).ready(function () {
 	$('#contextMenu-hover').rup_contextMenu({
 		trigger: 'hover',
 		callback: function(key, options) {
-			alert("clicked: " + key); 
+			//alert("clicked: " + key); 
 	    },
 	    items: {
             "edit": {"name": "Edit", "icon": "edit"},
@@ -113,6 +113,30 @@ jQuery(document).ready(function () {
 	
 	$("#activate-menu").on('click', function(e) {
         $('.contextMenu-other').rup_contextMenu("show");
+    });
+	
+	$(".contextMenu-other-red").rup_contextMenu({
+        trigger: 'none',
+        build: function($trigger, e) {
+	        return {
+	        	callback: function(key, options) {
+	    			alert("clicked: " + key); 
+	    	    },
+	            items: {
+	                "edit": {name: "Edit", icon: "edit"},
+	                "cut": {name: "Cut", icon: "cut"},
+	                "copy": {name: "Copy", icon: "copy"},
+	                "paste": {name: "Paste", icon: "paste"},
+	                "delete": {name: "Delete", icon: "delete"},
+	                "sep1": "---------",
+	                "quit": {name: "Quit", icon: "quit"}
+	            }
+	        };
+        }
+    });
+	
+	$("#activate-menu-red").on('click', function(e) {
+        $('.contextMenu-other-red').rup_contextMenu("show");
     });
 	
 //	
